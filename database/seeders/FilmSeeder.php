@@ -26,9 +26,9 @@ class FilmSeeder extends Seeder
         $categoryFantasia = DB::table('categories')->select('id_category')->where('name_category','=','Fantasia')->first();
         $categorySuspenso = DB::table('categories')->select('id_category')->where('name_category','=','Suspenso')->first();
         $categoryRomance = DB::table('categories')->select('id_category')->where('name_category','=','Romance')->first();
-        $typeNormal = DB::table('types')->select('id_type')->where('name_type','=','Normales')->first();
-        $typeAntigua = DB::table('types')->select('id_type')->where('name_type','=','Antiguas')->first();
-        $typeNuevos = DB::table('types')->select('id_type')->where('name_type','=','Nuevos Lanzamientos')->first();
+        $typeNormal = DB::table('types')->select('id_type')->where('name_type','=','Normal')->first();
+        $typeAntigua = DB::table('types')->select('id_type')->where('name_type','=','Vieja')->first();
+        $typeNuevos = DB::table('types')->select('id_type')->where('name_type','=','Nuevo Lanzamiento')->first();
         DB::table('films')->insert([
             'name_film' => 'El Caballero Oscuro',
             'year_film' => '2008',

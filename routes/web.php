@@ -28,3 +28,6 @@ $router->post('/rent-films',['uses'=>'FilmApiController@rentFilms']);
 $router->post('/create-films',['uses'=>'FilmApiController@createFilm']);
 
 $router->get('/points-client',['uses'=>'ClientRentApiController@index']);
+
+$router->post('/order-arrays',['uses'=>'OrderApiController@orderArray']);
+
