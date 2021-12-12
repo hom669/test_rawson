@@ -32,12 +32,12 @@ class RentalRepository
         return Film::class;
     }
 
-    /**
-     * Consultar los productos modificados desde una fecha especifica
+     /**
+     * Obtiene el Valor de la renta parametrizado en la tabla Rental
      *
-     * @param Request $request Contiene los filtros a aplicar en la consulta
-     * @return mixed Contiene una colección con los productos obtenidos de la base de datos
-     * @author Jhon García
+     * @param Ninguno
+     * 
+     * @author Haider Oviedo @hom669
      */
     public function getRentValue(){
         $rentValue = Rental::whereNull('deleted_at')

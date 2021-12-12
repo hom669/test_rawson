@@ -34,11 +34,11 @@ class ClientRentRepository
     }
 
     /**
-     * Consultar los productos modificados desde una fecha especifica
+     * Consultar los puntos que tiene el Cliente hasta el momento
      *
      * @param Request $request Contiene los filtros a aplicar en la consulta
-     * @return mixed Contiene una colección con los productos obtenidos de la base de datos
-     * @author Jhon García
+     * 
+     * @author Haider Oviedo @hom669
      */
     public function getPointForClient($request)
     {
@@ -59,6 +59,14 @@ class ClientRentRepository
 
         return $getPointForClient->groupBy('clients.id_client','clients.identification_client','clients.name_client')->get();
     }
+
+    /**
+     * Inserta los Registros de la Renta de la Pelicula
+     *
+     * @param Request $id_client,$filmsRent,$filmsPoints campos para realizar la insercion
+     * 
+     * @author Haider Oviedo @hom669
+     */
 
     public function insertRent($id_client,$filmsRent,$filmsPoints){
 

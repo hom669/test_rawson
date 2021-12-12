@@ -7,7 +7,7 @@ use App\Models\Client;
  * Class FilmRepository
  *
  * @package App\Repositories
- * @version December 11, 2021, 3:30 pm UTC
+ * @version December 11, 2021, 8:30 pm UTC
  * @method Product getFilms($request(*))
  */
 class ClientRepository
@@ -32,12 +32,12 @@ class ClientRepository
         return Film::class;
     }
 
-    /**
-     * Consultar los productos modificados desde una fecha especifica
+     /**
+     * Consulta para verificar si el cliente se encuentra registrado
      *
-     * @param Request $request Contiene los filtros a aplicar en la consulta
-     * @return mixed Contiene una colección con los productos obtenidos de la base de datos
-     * @author Jhon García
+     * @param Request $identification_client campos para realizar la consulta
+     * 
+     * @author Haider Oviedo @hom669
      */
     public function verifyClient($identification_client){
         $verifyClient = Client::whereNull('deleted_at')

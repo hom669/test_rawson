@@ -37,12 +37,12 @@ class FilmRepository
         return Film::class;
     }
 
-    /**
-     * Consultar los productos modificados desde una fecha especifica
+     /**
+     * Obtener listado de todas las peliculas disponibles o las peliculas filtradas por tipo
      *
-     * @param Request $request Contiene los filtros a aplicar en la consulta
-     * @return mixed Contiene una colección con los productos obtenidos de la base de datos
-     * @author Jhon García
+     * @param Request $name_type o $id_type parametros para realizar la busqueda
+     * 
+     * @author Haider Oviedo @hom669
      */
     public function getFilms($request)
     {
